@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Inter", sans-serif
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #f2f2f2;
+  margin: 5px;
+  width: 600px;
+  height: 300px;
+  padding: 5px;
+}
+
+.card img {
+  width: 300px;
+}
+
+.card h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card p {
+  color: #6d6b6b;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 8pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card .text-wrapper div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10pt;
+}
+
+.card .text-wrapper {
+  padding-top: 10px;
+}
+
+/* Style for the header section (customize as needed) */
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Style for the main article page container */
+.article-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the article title */
+.article-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Style for the article metadata (date and author) */
+.article-meta {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.article-source {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Style for the article image */
+.article-image {
+  margin-bottom: 20px;
+}
+
+.article-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Style for the article content */
+.article-content {
+  line-height: 1.6;
+}
+
+/* Style for the footer section (customize as needed) */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+
+.demo-logo {
+  color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.spint-wrapper {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
