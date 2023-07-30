@@ -10,6 +10,7 @@ type Props = {}
 const Home = ({ }: Props) => {
 
   const [newsList, setNewsList] = useState<Array<ArticleModel>>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [newsCount, setNewsCount] = useState<number>(0);
   const [page, setPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(10);
@@ -21,6 +22,7 @@ const Home = ({ }: Props) => {
         if (response.data.status === "ok") {
           setNewsList(newsList => [...newsList, ...response.data.articles])
           setNewsCount(response.data.totalResults);
+          setLoading(false);
         }
       }
     }).catch((error) => {
@@ -51,7 +53,7 @@ const Home = ({ }: Props) => {
         })}
       </select>
       <div className='card-wrapper' id="card-wrapper">
-        <InfiniteScroll
+        {!loading ? <InfiniteScroll
           dataLength={newsCount}
           next={onLoadMore}
           hasMore={newsList.length < newsCount}
@@ -75,7 +77,9 @@ const Home = ({ }: Props) => {
               />
             )
           })}
-        </InfiniteScroll>
+        </InfiniteScroll> : <div className="spint-wrapper">
+          <Spin />
+        </div>}
       </div>
     </React.Fragment>
   )
